@@ -1,6 +1,7 @@
 #!/bin/bash
+set -x
 
-pushd app
+pushd /workspaces/zmk/app
 
 west build -d build/hidergo_split_left --board=hidergo_split_left && \
 cp ./build/hidergo_split_left/zephyr/zmk.uf2 ../left.uf2 && \
