@@ -1,10 +1,13 @@
-### init
+## init
 https://zmk.dev/docs/development/local-toolchain/setup/container
 
-* zmk config
+## internal git project
+* hidergo addition
+git clone git@github.com:osmakari/hdl-core.git ./app/src/hdl
 
-`docker volume create --driver local -o o=bind -o type=none \
-  -o device="/absolute/path/to/zmk-config/" zmk-config`
+* zmk config
+Note to edit /absolute/path/to
+`docker volume create --driver local -o o=bind -o type=none -o device="/absolute/path/to/zmk-config/" zmk-config`
 
 * modules
 
@@ -17,11 +20,7 @@ west update
 west zephyr-export
 pip3 install --user -r zephyr/scripts/requirements.txt
 
-* hidergo addition
-git clone git@github.com:osmakari/hdl-core.git hidergo-hdl-core
-
-
-### build
+## build
 https://zmk.dev/docs/development/local-toolchain/build-flash
 
 1. `west update`
